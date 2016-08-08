@@ -74,17 +74,19 @@ img {
 }
 
 table#content {
-	-premailer-width: strip-unit($layout-width);
+	background-color: $bg-color;
+}
+
+table.container {
 	width: $layout-width;
+	-premailer-width: strip-unit($layout-width);
 	max-width: $layout-width;
 	min-width: $layout-width;
 	margin: 0 auto;
 	padding: 0;
 	table-layout: fixed;
-	text-align: left;
 	font-family: $font-family;
 	font-size: $font-size-base;
-	background-color: $bg-color;
 
 	table {
 		width: 100%;
@@ -94,6 +96,7 @@ table#content {
 		margin: 0;
 		padding: 0;
 		border: 0;
+		vertical-align: top;
 		text-align: left;
 	}
 }
