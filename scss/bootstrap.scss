@@ -1,0 +1,21 @@
+/**
+ * Bootstrap style for emails
+ *
+ * Inspired by the well know CSS framework but this is not the same
+ * bootstrap here is for "origin", base style
+ *
+**/
+
+@import "mixins/functions";
+
+@import "layout";
+@import "type";
+@import "table-grid";
+@import "list-items";
+
+@import "utilities";
+//@import "buttons";
+
+@import "preheader";
+@import "visibility-link";
+

@@ -1,0 +1,32 @@
+table.ol, table.ul {
+	table-layout: fixed;
+}
+
+li,
+td.li {
+	mso-line-height-rule: exactly;
+	font-family: $font-family;
+	font-size: $font-size-base;
+	line-height: $base-line;
+	font-weight: normal;
+	margin: 0 0 0 0;
+	color: $text-color;
+}
+
+td.li-bullet {
+	-premailer-width: 30;
+	width: 30px;
+	padding-right: 10px;
+	font-size: $font-size-base;
+	text-align: right;
+	vertical-align: top;
+}
+
+table.ul {
+	td.li-bullet {
+		//font-size: ($font-size-base*1.5);
+	}
+}
+
+td.li-content {
+}

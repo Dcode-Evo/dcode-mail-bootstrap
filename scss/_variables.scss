@@ -1,0 +1,72 @@
+@import "mixins/functions"; // this is an important include that contains strip-unit function
+
+//
+// layout
+// -----------------------------
+
+$grid-columns: 4; // number of columns in the grid
+$layout-width: 600px;
+
+//
+// Colors
+// -----------------------------
+
+$color-primary: #348eda;
+$color-branded: #5cb85c;
+
+$body-bg: 			#999999; // body background color
+$bg-color: 			#FFFFFF; // mail container background color
+$content-bg-color: $bg-color; // mail content background color
+
+//
+// Text
+// -----------------------------
+
+$text-color: 			#000000;
+$text-color-invert: 	#FFFFFF;
+$text-color-heading: $color-primary;
+
+//
+// Links
+// -----------------------------
+
+$color-link: 		$color-primary;
+$link-decoration:	underline;
+
+//
+// Typography
+// -----------------------------
+
+$font-family: 			Arial, Helvetica, "Tahoma", sans-serif;
+$font-family-heading: "Times New Roman", Times, serif;
+
+$font-size-base: 		14px;
+$font-size-small: 	11px;
+
+$line-height-base: 	floor(($font-size-base * 1.4)) !default;
+
+$text-font-weight: normal;
+$headings-font-weight: normal;
+
+$font-size-h1: 		floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: 		floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: 		ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: 		ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: 		$font-size-base !default;
+$font-size-h6: 		ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//
+// Buttons
+// -----------------------------
+
+$btn-border-radius: 5px;
+
+/**
+ * ==== Retro compatibility declarations
+ **/
+$body-bg-color: $body-bg;
+$color-invert: $text-color-invert;
+$color: $text-color;
+$base-line: $line-height-base;
+
+

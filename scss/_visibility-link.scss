@@ -1,0 +1,13 @@
+#visibility_link {
+	width: 100%;
+	max-width: $layout-width;
+	margin: 20px auto 15px;
+	text-align: center;
+	font-size: 12px;
+	box-sizing: border-box;
+
+	> a {
+		color: $text-color;
+		text-decoration: $link-decoration;
+	}
+}

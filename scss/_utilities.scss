@@ -1,0 +1,22 @@
+/* -------------------------------------
+    OTHER STYLES THAT MIGHT BE USEFUL
+------------------------------------- */
+
+.baseline-spacer {
+	mso-line-height-rule: exactly;
+	height: $base-line;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: $base-line;
+}
+
+.clear {
+	clear: both;
+}
+
+td.p, p {
+	&.no-margin {
+		margin-bottom: 0;
+	}
+}

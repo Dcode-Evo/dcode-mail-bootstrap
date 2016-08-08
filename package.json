@@ -1,0 +1,19 @@
+{
+  "name": "dcode-mail-bootstrap",
+  "version": "0.1.0",
+  "description": "Default CSS tructure for DcodeMail grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dcode-Evo/dcode-mail-bootstrap.git"
+  },
+  "author": "Aleksei Polechin (http://alek.be)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dcode-Evo/dcode-mail-bootstrap/issues"
+  },
+  "homepage": "https://github.com/Dcode-Evo/dcode-mail-bootstrap#readme"
+}

@@ -1,0 +1,99 @@
+/* -------------------------------------
+    BODY & CONTAINER
+------------------------------------- */
+
+html,
+body,
+.body {
+	background-color: $body-bg;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border: 0;
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+
+	td {
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+}
+
+table[class=body] {
+	@media only screen and (max-width: $layout-width) {
+		.container, #header, #footer,
+		.container > tbody > tr > td.content-inner {
+			width: 100% !important;
+			min-width: 100% !important;
+		}
+	}
+}
+
+p {
+	box-sizing: border-box;
+}
+
+img {
+	outline: none;
+	text-decoration: none;
+	-ms-interpolation-mode: bicubic;
+}
+
+a img {
+	border: none;
+}
+
+img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	&.inline {
+		display: inline;
+	}
+}
+
+//
+// Email default structure
+//
+// body > table.body > tbody > tr > td.content-wrapper > table#content.container > tbody > tr > td.content-inner
+//
+//---------------------------------
+
+.content-wrapper {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+#header, #footer {
+	// no particular default styles for this element
+}
+
+table#content {
+	-premailer-width: strip-unit($layout-width);
+	width: $layout-width;
+	max-width: $layout-width;
+	min-width: $layout-width;
+	margin: 0 auto;
+	padding: 0;
+	table-layout: fixed;
+	text-align: left;
+	font-family: $font-family;
+	font-size: $font-size-base;
+	background-color: $bg-color;
+
+	table {
+		width: 100%;
+	}
+
+	td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		text-align: left;
+	}
+}

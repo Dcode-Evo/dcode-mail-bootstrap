@@ -1,0 +1,111 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin container-fixed() {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Generate the small columns
+@mixin make-sm-column($columns) {
+	//position: relative;
+	//
+	//@media (max-width: $layout-width) {
+	//	float: left;
+	//	width: percentage(($columns / $grid-columns));
+	//}
+	div.col-sm-#{$columns}, td.col-sm-#{$columns} {
+		width: percentage(($columns / $grid-columns)) !important;
+	}
+
+	td.col-sm-#{$columns} {
+		display: block !important;
+		float: left;
+	}
+}
+
+// Generate the large columns
+@mixin make-lg-column($columns) {
+	div.col-lg-#{$columns}, td.col-lg-#{$columns} {
+		width: percentage(($columns / $grid-columns));
+	}
+	td.col-lg-#{$columns} {
+		-premailer-width: percentage(($columns / $grid-columns));
+	}
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+	@for $i from (1 + 1) through $grid-columns {
+		$list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+	}
+	#{$list} {
+		position: relative;
+		// Prevent columns from collapsing when empty
+		min-height: 1px;
+	}
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+	@for $i from (1 + 1) through $grid-columns {
+		$list: "#{$list}, div.col-#{$class}-#{$i}";
+	}
+	div#{$list} {
+		float: left;
+	}
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+	@if ($type == width) and ($index > 0) {
+		@if ($class == 'sm') {
+			@include make-sm-column($index);
+		}
+		@if ($class == 'lg') {
+			@include make-lg-column($index);
+		}
+	}
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loop-grid-columns($columns, $class, $type) {
+	@for $i from 0 through $columns {
+		@include calc-grid-column($i, $class, $type);
+	}
+}
+
+// Create grid for specific class
+@mixin make-grid($class) {
+	@include float-grid-columns($class);
+	@include loop-grid-columns($grid-columns, $class, width);
+}
+
+@media (max-width: $layout-width) {
+	@include make-grid('sm');
+}
+
+@include make-grid('lg');
+
+div.clear {
+	width: 100%;
+	height: 0;
+	font-size: 0;
+}
+
+div.row{
+	float: none;
+	clear: both;
+}
+
+table.rtw {
+	width: 100%;
+	float: none;
+	clear: both;
+}

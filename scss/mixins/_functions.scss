@@ -1,0 +1,9 @@
+/**
+    * strip-unit
+    * removes the unit from provided value : 100px => 100
+    * @usage: -premailer-width: strip-unit(100px)
+    * @param: {number} -> number with unit
+    */
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}
