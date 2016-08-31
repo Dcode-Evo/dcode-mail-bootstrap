@@ -1,21 +1,30 @@
 /**
  * Bootstrap style for emails
  *
- * Inspired by the well know CSS framework but this is not the same
+ * Inspired by the well known CSS framework but this is not the same
  * bootstrap here is for "origin", base style
  *
 **/
+// Must be included before variables
+@import "mixins/functions"; // this is an important include that contains strip-unit function
 
-@import "mixins/functions";
+// base variables
+@import "variables";
 
+// Mixins
+@import "mixins/grid_framework";
+
+// Main styles
 @import "layout";
-@import "type";
 @import "table-grid";
+@import "type";
 @import "list-items";
-
-@import "utilities";
 //@import "buttons";
 
+// Some usefull classes
+@import "utilities";
+
+// Components
 @import "preheader";
 @import "visibility-link";
 

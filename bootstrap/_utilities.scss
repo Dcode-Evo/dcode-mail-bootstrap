@@ -2,19 +2,12 @@
     OTHER STYLES THAT MIGHT BE USEFUL
 ------------------------------------- */
 
-.baseline-spacer {
-	mso-line-height-rule: exactly;
-	height: $base-line;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	line-height: $base-line;
-}
-
+// clear the float
 .clear {
 	clear: both;
 }
 
+// remove the bottom margin from a paragraph
 td.p, p {
 	&.no-margin {
 		margin-bottom: 0;

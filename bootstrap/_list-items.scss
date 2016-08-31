@@ -2,7 +2,6 @@ table.ol, table.ul {
 	table-layout: fixed;
 }
 
-li,
 td.li {
 	mso-line-height-rule: exactly;
 	font-family: $font-family;
@@ -15,7 +14,7 @@ td.li {
 
 td.li-bullet {
 	-premailer-width: 30;
-	width: 30px;
+	width: 25px;
 	padding-right: 10px;
 	font-size: $font-size-base;
 	text-align: right;
@@ -24,7 +23,7 @@ td.li-bullet {
 
 table.ul {
 	td.li-bullet {
-		//font-size: ($font-size-base*1.5);
+		font-size: 14px;
 	}
 }
 

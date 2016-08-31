@@ -1,3 +1,5 @@
+@import "reset";
+
 /* -------------------------------------
     BODY & CONTAINER
 ------------------------------------- */
@@ -6,54 +8,6 @@ html,
 body,
 .body {
 	background-color: $body-bg;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-table {
-	border: 0;
-	border-collapse: collapse;
-	mso-table-lspace: 0pt;
-	mso-table-rspace: 0pt;
-
-	td {
-		box-sizing: border-box;
-		vertical-align: top;
-	}
-}
-
-table[class=body] {
-	@media only screen and (max-width: $layout-width) {
-		.container, #header, #footer,
-		.container > tbody > tr > td.content-inner {
-			width: 100% !important;
-			min-width: 100% !important;
-		}
-	}
-}
-
-p {
-	box-sizing: border-box;
-}
-
-img {
-	outline: none;
-	text-decoration: none;
-	-ms-interpolation-mode: bicubic;
-}
-
-a img {
-	border: none;
-}
-
-img {
-	display: block;
-	margin: 0;
-	padding: 0;
-	&.inline {
-		display: inline;
-	}
 }
 
 //
@@ -67,10 +21,6 @@ img {
 	margin: 0;
 	padding: 0;
 	vertical-align: top;
-}
-
-#header, #footer {
-	// no particular default styles for this element
 }
 
 table#content {
@@ -99,4 +49,24 @@ table.container {
 		vertical-align: top;
 		text-align: left;
 	}
+}
+
+p {
+	box-sizing: border-box;
+}
+
+img {
+	&.inline {
+		display: inline;
+	}
+}
+
+/* SPACER CONFIG */
+.baseline-spacer {
+	mso-line-height-rule: exactly;
+	height: $base-line;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: $base-line;
 }

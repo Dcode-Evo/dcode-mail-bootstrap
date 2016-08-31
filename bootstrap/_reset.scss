@@ -1,0 +1,48 @@
+/* -------------------------------------
+    RESET SOME CLIENT DEFAULTS
+------------------------------------- */
+
+html,
+body,
+.body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+table {
+	border: 0;
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+
+	td {
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+}
+
+table[class=body] {
+	@media only screen and (max-width: $layout-width) {
+		.container, #header, #footer,
+		.container > tbody > tr > td.content-inner {
+			width: 100% !important;
+			min-width: 100% !important;
+		}
+	}
+}
+
+img {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	outline: none;
+	text-decoration: none;
+	-ms-interpolation-mode: bicubic;
+}
+
+a img {
+	border: none;
+}
