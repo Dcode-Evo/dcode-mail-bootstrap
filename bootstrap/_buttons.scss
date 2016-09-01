@@ -22,7 +22,7 @@
 }
 
 .btn-primary {
-	@include button-variant(#FFF, $color-branded);
+	@include button-variant(#FFF, $brand-primary);
 }
 
 .btn-link {
