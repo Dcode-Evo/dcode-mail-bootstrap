@@ -1,3 +1,6 @@
+// Must be included before variables
+@import "mixins/functions"; // this is an important include that contains strip-unit function
+
 //
 // layout
 // -----------------------------
@@ -11,8 +14,8 @@ $grid-gutter: 30px; // space between columns
 // Colors
 // -----------------------------
 
-$color-primary: #348eda;
-$color-branded: #5cb85c;
+$brand-primary: #348eda;
+$brand-secondary: #5cb85c;
 
 $body-bg: 			#999999; // body background color
 $bg-color: 			#FFFFFF; // mail container background color
@@ -24,14 +27,34 @@ $content-bg-color: $bg-color; // mail content background color
 
 $text-color: 			#000000;
 $text-color-invert: 	#FFFFFF;
-$text-color-heading: $color-primary;
+$text-color-heading: $brand-primary;
 
 //
 // Links
 // -----------------------------
 
-$color-link: 		$color-primary;
+$link-color: 		$brand-primary;
 $link-decoration:	underline;
+
+//
+// Buttons
+// -----------------------------
+
+$btn-default-width: 200px;
+$btn-default-height: 40px;
+
+$btn-padding-vertical: 				5px;
+$btn-padding-horizontal: 			10px;
+
+$btn-font-weight:                normal;
+$btn-font-size:                	15px;
+
+$btn-default-color:              $text-color;
+$btn-default-bg:                 #CCC;
+
+$btn-border-radius-base:         4px;
+$btn-border-radius-large:        6px;
+$btn-border-radius-small:        2px;
 
 //
 // Typography
@@ -55,11 +78,7 @@ $font-size-h4: 		ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5: 		$font-size-base !default;
 $font-size-h6: 		ceil(($font-size-base * 0.85)) !default; // ~12px
 
-//
-// Buttons
-// -----------------------------
 
-$btn-border-radius: 5px;
 
 /**
  * ==== Retro compatibility declarations

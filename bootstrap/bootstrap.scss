@@ -5,11 +5,6 @@
  * bootstrap here is for "origin", base style
  *
 **/
-// Must be included before variables
-@import "mixins/functions"; // this is an important include that contains strip-unit function
-
-// base variables
-@import "variables";
 
 // Mixins
 @import "mixins/grid_framework";
@@ -19,7 +14,7 @@
 @import "table-grid";
 @import "type";
 @import "list-items";
-//@import "buttons";
+@import "buttons";
 
 // Some usefull classes
 @import "utilities";

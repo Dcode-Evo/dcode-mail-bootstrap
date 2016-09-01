@@ -1,0 +1,32 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+	display: inline-block;
+	color: $btn-default-color;
+	font-weight: $btn-font-weight;
+	text-align: center;
+	-webkit-text-size-adjust: none;
+	@include button-size($btn-default-width, $btn-default-height, $btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $btn-border-radius-base);
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+	@include button-variant($btn-default-color, $btn-default-bg);
+}
+
+.btn-primary {
+	@include button-variant(#FFF, $color-branded);
+}
+
+.btn-link {
+	color: $link-color;
+	text-decoration: $link-decoration;
+}
+

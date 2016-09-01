@@ -1,0 +1,27 @@
+
+@mixin button-size($width, $height, $padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+	v\: {
+		//-attr-arcsize: 10%;
+		height: strip-unit($height);
+		width: strip-unit($width);
+	}
+	a {
+		height: $height;
+		width: $width;
+		padding: $padding-vertical $padding-horizontal;
+		border-radius: $border-radius;
+		font-size: $font-size;
+		line-height: $height;
+	}
+}
+
+@mixin button-variant($color, $background) {
+	v\: {
+		//-attr-fillcolor: $background;
+	}
+	a {
+		color: $color;
+		text-decoration: none;
+		background-color: $background;
+	}
+}
