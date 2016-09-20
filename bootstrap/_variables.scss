@@ -5,8 +5,10 @@
 // layout
 // -----------------------------
 
-$grid-columns: 					12; // number of columns in the grid
 $layout-width: 					600px;
+
+$enable-grid-css:						true; // enables col-X-sm/lg classes generation (with media quaries)
+$grid-columns: 					12; // number of columns in the grid
 
 $grid-gutter: 						30px; // space between columns
 

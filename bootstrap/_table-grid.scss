@@ -1,8 +1,10 @@
-@media (max-width: $layout-width) {
-	@include make-grid('sm');
-}
+@if $enable-grid-css {
+	@media (max-width: $layout-width) {
+		@include make-grid('sm');
+	}
 
-@include make-grid('lg');
+	@include make-grid('lg');
+}
 
 div.responsive-table {
 	display: table;
@@ -14,25 +16,26 @@ div.responsive-table {
 }
 
 .column {
-	@if($grid-gutter){
+	@if $grid-gutter != 0 {
+		background-color: red;
 		padding-right: $grid-gutter/2;
 		padding-left: $grid-gutter/2;
 	}
 	vertical-align: top;
 
 	&.first {
-		@if($grid-gutter) {
+		@if $grid-gutter != 0 {
 			padding-left: 0;
 		}
 	}
 	&.last {
-		@if($grid-gutter) {
+		@if $grid-gutter != 0 {
 			padding-right: 0;
 		}
 	}
 	@media (max-width: $layout-width){
 		box-sizing: border-box;
-		@if($grid-gutter){
+		@if $grid-gutter != 0 {
 			padding-right: $grid-gutter/2 !important;
 			padding-left: $grid-gutter/2 !important;
 		}
