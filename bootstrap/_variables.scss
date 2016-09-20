@@ -1,33 +1,33 @@
-// Must be included before variables
+// ==== Must be included before variables ====
 @import "mixins/functions"; // this is an important include that contains strip-unit function
 
 //
 // layout
 // -----------------------------
 
-$grid-columns: 12; // number of columns in the grid
-$layout-width: 600px;
+$grid-columns: 					12; // number of columns in the grid
+$layout-width: 					600px;
 
-$grid-gutter: 30px; // space between columns
+$grid-gutter: 						0; // space between columns
 
 //
 // Colors
 // -----------------------------
 
-$brand-primary: #348eda;
-$brand-secondary: #5cb85c;
+$brand-primary: 					#348eda;
+$brand-secondary: 				#5cb85c;
 
-$body-bg: 			#eee; // body background color
-$bg-color: 			#fff; // mail container background color
-$content-bg-color: $bg-color; // mail content background color
+$body-bg: 							#eee; // body background color
+$bg-color: 							#fff; // mail container background color
+$content-bg-color: 				$bg-color; // mail content background color
 
 //
 // Text
 // -----------------------------
 
-$text-color: 			#000000;
-$text-color-invert: 	#FFFFFF;
-$text-color-heading: $brand-primary;
+$text-color: 						#000000;
+$text-color-invert: 				#FFFFFF;
+$text-color-heading: 			$brand-primary;
 
 //
 // Links
@@ -40,48 +40,48 @@ $link-decoration:	underline;
 // Buttons
 // -----------------------------
 
-$btn-default-width: 200px;
-$btn-default-height: 40px;
+$btn-default-width: 				200px;
+$btn-default-height: 			40px;
 
-$btn-padding-vertical: 				5px;
-$btn-padding-horizontal: 			10px;
+$btn-padding-vertical: 			5px;
+$btn-padding-horizontal:		10px;
 
-$btn-font-weight:                normal;
-$btn-font-size:                	15px;
+$btn-font-weight:            	normal;
+$btn-font-size:             	15px;
 
-$btn-default-color:              $text-color;
-$btn-default-bg:                 #CCC;
+$btn-default-color:          	$text-color;
+$btn-default-bg:             	#CCC;
 
-$btn-border-radius-base:         4px;
-$btn-border-radius-large:        6px;
-$btn-border-radius-small:        2px;
+$btn-border-radius-base:     	4px;
+$btn-border-radius-large:    	6px;
+$btn-border-radius-small:    	2px;
 
 //
 // Typography
 // -----------------------------
 
-$font-family: 			Arial, Helvetica, "Tahoma", sans-serif;
-$font-family-heading: "Times New Roman", Times, serif;
+$font-family: 						Arial, Helvetica, "Tahoma", sans-serif;
+$font-family-heading: 			$font-family;
 
-$font-size-base: 		14px;
-$font-size-small: 	11px;
+$font-size-base: 					14px;
+$font-size-small: 				11px;
 
-$line-height-base: 	floor(($font-size-base * 1.4)) !default;
+$line-height-base: 				floor(($font-size-base * 1.4)) !default;
 
-$text-font-weight: normal;
-$headings-font-weight: normal;
+$text-font-weight: 				normal;
+$headings-font-weight:			normal;
 
-$font-size-h1: 		floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2: 		floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3: 		ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4: 		ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5: 		$font-size-base !default;
-$font-size-h6: 		ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h1: 					floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: 					floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: 					ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: 					ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: 					$font-size-base !default;
+$font-size-h6: 					ceil(($font-size-base * 0.85)) !default; // ~12px
 
 
 
 /**
- * ==== Retro compatibility declarations
+ * ==== Retro compatibility declarations (DO NOT CHANGE) TODO: remove wen all projects are safe
  **/
 $body-bg-color: $body-bg;
 $color-invert: $text-color-invert;
