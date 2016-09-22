@@ -1,6 +1,6 @@
 
 @mixin button-size($width, $height, $padding-vertical, $padding-horizontal, $font-size, $border-radius) {
-	v\: {
+	#{v\:} {
 		//-attr-arcsize: 10%;
 		height: $height;
 		width: $width;
@@ -16,7 +16,7 @@
 }
 
 @mixin button-variant($color, $background) {
-	v\: {
+	#{v\:} {
 		//-attr-fillcolor: $background;
 	}
 	a {
