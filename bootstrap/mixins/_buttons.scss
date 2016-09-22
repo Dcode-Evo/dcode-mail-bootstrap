@@ -1,12 +1,15 @@
-
 @mixin button-size($width, $height, $padding-vertical, $padding-horizontal, $font-size, $border-radius) {
-	#{v\:} {
-		//-attr-arcsize: 10%;
+	[btnvlm] {
 		height: $height;
 		width: $width;
 	}
+
+	center {
+		font-size: $font-size;
+	}
+
 	a {
-		height: $height;
+		//height: $height;
 		width: $width;
 		padding: $padding-vertical $padding-horizontal;
 		border-radius: $border-radius;
@@ -16,12 +19,11 @@
 }
 
 @mixin button-variant($color, $background) {
-	#{v\:} {
-		//-attr-fillcolor: $background;
+	center {
+		color: $color;
 	}
 	a {
 		color: $color;
-		text-decoration: none;
 		background-color: $background;
 	}
 }

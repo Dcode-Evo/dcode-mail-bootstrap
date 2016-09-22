@@ -6,12 +6,25 @@
 // --------------------------------------------------
 
 .btn {
-	display: inline-block;
-	color: $btn-default-color;
-	font-weight: $btn-font-weight;
-	text-align: center;
-	-webkit-text-size-adjust: none;
 	@include button-size($btn-default-width, $btn-default-height, $btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $btn-border-radius-base);
+
+	[btnvml] {
+		v-text-anchor: middle;
+	}
+	center {
+		font-family: $font-family;
+		font-weight: $btn-font-weight;
+	}
+	a {
+		display: inline-block;
+		color: $btn-default-color;
+		font-family: $font-family;
+		font-weight: $btn-font-weight;
+		text-align: center;
+		text-decoration: none;
+		-webkit-text-size-adjust: none;
+		mso-hide: all;
+	}
 }
 
 // Alternate buttons
@@ -26,7 +39,9 @@
 }
 
 .btn-link {
-	color: $link-color;
-	text-decoration: $link-decoration;
+	a, center {
+		color: $link-color;
+		text-decoration: $link-decoration;
+	}
 }
 
