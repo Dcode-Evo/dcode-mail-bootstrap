@@ -1,6 +1,6 @@
 {
   "name": "dcode-mail-bootstrap",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Default CSS tructure for DcodeMail grunt",
   "main": "index.js",
   "scripts": {
