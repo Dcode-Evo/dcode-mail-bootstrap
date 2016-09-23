@@ -46,8 +46,11 @@ div.column.responsive {
 	display: table-cell;
 }
 
-div.row.responsive {
-	display: table-row;
+div.row {
+	width: 100%;
+	&.responsive {
+		display: table-row;
+	}
 }
 
 // TODO: test without it
