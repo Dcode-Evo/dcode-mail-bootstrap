@@ -20,7 +20,12 @@ div.responsive-table {
 	}
 }
 
+div.column {
+	box-sizing: border-box;
+}
+
 .column {
+
 	@if $grid-gutter != 0 {
 		padding-right: $grid-gutter/2;
 		padding-left: $grid-gutter/2;
@@ -37,7 +42,7 @@ div.responsive-table {
 			padding-right: 0;
 		}
 	}
-	@media (max-width: $layout-width){
+	@media (max-width: $layout-width) {
 		box-sizing: border-box;
 		@if $grid-gutter != 0 {
 			padding-right: $grid-gutter/2 !important;
@@ -45,7 +50,6 @@ div.responsive-table {
 		}
 	}
 }
-
 
 // TODO: is this still usefull ?
 div.row {
