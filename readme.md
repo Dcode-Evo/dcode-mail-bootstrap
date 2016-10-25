@@ -1,5 +1,11 @@
-# Bootstrap style for emails
+# Mail Bootstrap by Dcode
 
-Inspired by the well know CSS framework but this is not the same
+Inspired by the famous CSS framework, this "framework" tends to provide something global and reusable to build emails
+faster.
 
-"bootstrap" is for "origin", this is not the same framework
+## WIKI
+- [Layout](wiki/Layout)
+- [Buttons](wiki/Buttons)
+- Grid system
+- Utilities
+- Resets

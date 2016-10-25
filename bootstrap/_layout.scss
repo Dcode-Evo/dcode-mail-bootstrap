@@ -10,6 +10,16 @@ body,
 	background-color: $body-bg;
 }
 
+table[class^=body] {
+	@media only screen and (max-width: $layout-width) {
+		.container, #header, #footer,
+		.container > tbody > tr > td.content-inner {
+			width: 100% !important;
+			min-width: 100% !important;
+		}
+	}
+}
+
 //
 // Email default structure
 //
@@ -17,7 +27,7 @@ body,
 //
 //---------------------------------
 
-.content-wrapper {
+#content-wrapper {
 	margin: 0;
 	padding: 0;
 	vertical-align: top;
@@ -25,32 +35,31 @@ body,
 
 table#content {
 	background-color: $bg-color;
+
+	// this is the table#content > tr > td
+	.content-inner {
+		text-align: left;
+		font-family: $font-family;
+		font-size: $font-size-base;
+	}
 }
 
-table.container {
+// can be applied on div and table
+.container {
 	width: $layout-width;
-	-premailer-width: strip-unit($layout-width);
 	max-width: $layout-width;
 	min-width: $layout-width;
 	margin: 0 auto;
 	padding: 0;
-	table-layout: fixed;
-	font-family: $font-family;
-	font-size: $font-size-base;
-
-	table {
-		width: 100%;
-	}
-
-	td {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		vertical-align: top;
-		text-align: left;
-	}
 }
 
+// extend the .container for tables
+table.container {
+	-premailer-width: strip-unit($layout-width);
+	table-layout: fixed;
+}
+
+// not shure for this one, maybe make a specific class to not apply this on every p
 p {
 	box-sizing: border-box;
 }
