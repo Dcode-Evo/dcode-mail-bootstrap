@@ -13,9 +13,16 @@ div.responsive-table {
 table.responsive-table,
 div.responsive-table {
 	table-layout: fixed;
+
+	div.column {
+		display: table-cell;
+		box-sizing: border-box;
+	}
 }
 
 .column {
+	box-sizing: border-box;
+
 	@if $grid-gutter != 0 {
 		padding-right: $grid-gutter/2;
 		padding-left: $grid-gutter/2;
@@ -32,7 +39,7 @@ div.responsive-table {
 			padding-right: 0;
 		}
 	}
-	@media (max-width: $layout-width){
+	@media (max-width: $layout-width) {
 		box-sizing: border-box;
 		@if $grid-gutter != 0 {
 			padding-right: $grid-gutter/2 !important;
@@ -41,23 +48,10 @@ div.responsive-table {
 	}
 }
 
-div.column.responsive {
-	display: table-cell;
-}
-
+// TODO: is this still usefull ?
 div.row {
 	width: 100%;
 	&.responsive {
 		display: table-row;
 	}
 }
-
-// TODO: test without it
-//@media all and (max-width: $layout-width) {
-	//div.column.responsive.col-sm-12 {
-	//	display: block !important;
-	//	width: 100% !important;
-	//}
-//}
-
-
