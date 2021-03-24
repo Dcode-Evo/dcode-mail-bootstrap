@@ -10,7 +10,7 @@ body,
 	background-color: $body-bg;
 }
 
-table[class^=body] {
+table.body {
 	@media only screen and (max-width: $layout-width) {
 		.container, #header, #footer,
 		.container > tbody > tr > td.content-inner {
